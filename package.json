@@ -21,6 +21,7 @@
     "aos": "^2.3.4",
     "distance-calculator-js": "^1.0.0",
     "emailjs": "^4.0.3",
+    "firebase": "^12.1.0",
     "google-distance": "^1.0.1",
     "local-storage": "^2.0.0",
     "net": "^1.0.2",
