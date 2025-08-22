@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Head from "next/head";
-import CtaSection from "@/components/cta-section";
+import Adminpanel from "@/components/admin-panel";
 
 export default function Home() {
   useEffect(() => {
@@ -9,14 +9,14 @@ export default function Home() {
   return (
     <>
       <Head>
-          <title>Next</title>
+          <title>Admin panel</title>
           <meta name="description" content=""/>
           <meta name="og:description" content=""/>
           <meta name="keywords" content=""/>
           <meta property="og:url" content=""/>
           <meta property="og:title" content=""/>
       </Head>
-      <CtaSection/>
+      <Adminpanel/>
     </>
   );
 }

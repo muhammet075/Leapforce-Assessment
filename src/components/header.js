@@ -13,6 +13,8 @@ function Header() {
     return(      
         <header className={styles.header}>  
             <div>
+                <h1>Leapforce Assessment</h1>
+                <h2>Muhammet Kömür</h2>
             </div>
         </header>
     )

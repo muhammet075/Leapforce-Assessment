@@ -19,7 +19,8 @@ h1, h2, h3, h4{
 }
 
 main{
-  margin-top: 85px;
+  max-width: 1300px;
+  margin: 50px auto;
 }
 
 a {
@@ -29,36 +30,4 @@ a {
 
 button{
   cursor: pointer;
-}
-
-.displaynone{
-  display: none !important;
-}
-
-.openhamburger {
-  animation: openhamburger .5s forwards
-}
-
-.closehamburger {
-  animation: closehamburger .5s forwards
-}
-
-@keyframes openhamburger {
-  0% {
-      left: -2000px
-  }
-
-  to {
-      left: 0px;
-  }
-}
-
-@keyframes closehamburger {
-  0% {
-      left: 0px;
-  }
-
-  to {
-      left: -2000px
-  }
 }
