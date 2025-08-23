@@ -51,7 +51,7 @@
     max-width: 1312px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     gap: 24px;
 } 
 
@@ -139,7 +139,7 @@
 
 @media only screen and (max-width: 475px) {
     .ctasection > div:nth-of-type(2){
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
         gap: 24px;
     } 
 

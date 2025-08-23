@@ -110,51 +110,72 @@ export default function Adminpanel() {
 
   return (
     <div className={styles.adminpanel}>
-      <h2>Admin Panel</h2>
+      <div>
+        <h2>Admin Panel</h2>
+        <button onClick={saveData}>Opslaan</button>
+      </div>
 
       <div>
-        <label>Label</label>
-        <input value={label} onChange={e => setLabel(e.target.value)} />
+        <section>
+          <label>Label</label>
+          <input value={label} onChange={e => setLabel(e.target.value)} maxlength="20"/>
+        </section>
 
-        <label>Title</label>
-        <input value={title} onChange={e => setTitle(e.target.value)} />
+        <section>
+          <label>Title</label>
+          <input value={title} onChange={e => setTitle(e.target.value)} />
+        </section>
 
-        <label>Optional Body</label>
-        <input value={optionalBody} onChange={e => setOptionalBody(e.target.value)} />
+        <section>
+          <label>Optional Body</label>
+          <input value={optionalBody} onChange={e => setOptionalBody(e.target.value)} />
+        </section>
 
-        <label>Optional Button</label>
-        <input value={optionalButton} onChange={e => setOptionalButton(e.target.value)} />
+        <section>
+          <label>Optional Button</label>
+          <input value={optionalButton} onChange={e => setOptionalButton(e.target.value)} />
+        </section>
 
-        <label>Aantal Cards</label>
-        <select value={amountCards} onChange={e => setAmountCards(parseInt(e.target.value))}>
-          {[0, 1, 2, 3, 4, 5, 6].map(num => (
-            <option key={num} value={num}>{num}</option>
+        <section>
+          <label>Aantal Cards</label>
+          <select value={amountCards} onChange={e => setAmountCards(parseInt(e.target.value))}>
+            {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
+              <option key={num} value={num}>{num}</option>
+            ))}
+          </select>
+        </section>
+        </div>
+
+        <div>
+          {cards.map((card, index) => (
+            <section key={index} className={styles.cardBlock}>
+              <div>
+                <p>Card {index + 1}</p>
+
+                <div>
+                  <label>Title</label>
+                  <input placeholder="Title" value={card.title} onChange={e => handleCardChange(index, "title", e.target.value)} maxlength="30"/>
+                </div>
+
+                <div>
+                  <label>Description</label>
+                  <input placeholder="Description" value={card.description} onChange={e => handleCardChange(index, "description", e.target.value)} maxlength="60"/>
+                </div>
+
+                <div>
+                  <label>Link for button</label>
+                  <input placeholder="Link" value={card.link} onChange={e => handleCardChange(index, "link", e.target.value)}/>
+                </div>
+              </div>
+            </section>
           ))}
-        </select>
-
-        {cards.map((card, index) => (
-          <div key={index} className={styles.cardBlock}>
-            <h4>Card {index + 1}</h4>
-
-            <label>Title</label>
-            <input placeholder="Title" value={card.title} onChange={e => handleCardChange(index, "title", e.target.value)} />
-
-            <label>Description</label>
-            <input placeholder="Description" value={card.description} onChange={e => handleCardChange(index, "description", e.target.value)} />
-
-            <label>Link</label>
-            <input placeholder="Link" value={card.link} onChange={e => handleCardChange(index, "link", e.target.value)} />
-          </div>
-        ))}
-
-        <button onClick={saveData}>Opslaan</button>
+        </div>
 
       {success && (
         <div id="succesmessage"><p>Aanpassingen met succes opgeslagen!</p></div>
       )}
 
 
-      </div>
     </div>
   );
 }
