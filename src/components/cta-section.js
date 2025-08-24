@@ -4,7 +4,7 @@ import Image from "next/image";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../components/firebase";
 import styles from "@/styles/cta-section.module.css";
-import arrowRight from "@/assets/icons/arrow-right.svg";
+import arrowRight from "@/assets/icons/arrow-right-white.svg";
 import oranjeRoodArrowRight from "@/assets/icons/arrow-right-oranjerood.svg";
 
 export default function CtaSection() {
@@ -36,8 +36,10 @@ export default function CtaSection() {
   return (
     <div className={styles.ctasection}>
       <div>
-        <p>{ctaData.label}</p>
-        <h2 dangerouslySetInnerHTML={{ __html: ctaData.title }} />
+        <div>
+          <p>{ctaData.label}</p>
+          <h2 dangerouslySetInnerHTML={{ __html: ctaData.title }}/>
+        </div>
         {ctaData.optionalBody && <p>{ctaData.optionalBody}</p>}
         {ctaData.optionalButton && <button>{ctaData.optionalButton}<Image src={oranjeRoodArrowRight} alt="Arrow right icon"/></button>}
       </div>

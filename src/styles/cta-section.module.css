@@ -11,14 +11,20 @@
     gap: 24px;
 }
 
-.ctasection > div:nth-of-type(1) > p:nth-of-type(1){
+.ctasection > div:nth-of-type(1) > div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ctasection > div:nth-of-type(1) > div > p{
     font-size: 15px;
     font-weight: 450;
     line-height: 16px;
     color: var(--groenGrijs);
 }
 
-.ctasection > div:nth-of-type(1) > h2{
+.ctasection > div:nth-of-type(1) > div > h2{
     max-width: 500px;
     margin: 0 auto;
     font-size: 40px;
@@ -28,16 +34,16 @@
     color: var(--headerZwart);
 }
 
-.ctasection > div:nth-of-type(1) > h2 > span{
+.ctasection > div:nth-of-type(1) > div > h2 > span{
     font-family: "GTAlpina Light";
     font-weight: 300;
 }
 
-.ctasection > div:nth-of-type(1) > p:nth-of-type(2){
+.ctasection > div:nth-of-type(1) > p{
     font-size: 19px;
     font-weight: 450;
     line-height: 24px;
-    letter-spacing: 2%;
+    color: var(--groenGrijs);
 }
 
 .ctasection > div:nth-of-type(1) > button{
@@ -48,9 +54,15 @@
     background: none;
     border: none;
     font-size: 19px;
-    font-weight: 450;
+    font-weight: 400;
     line-height: 24px;
     color: var(--oranjeRood);
+}
+
+.ctasection > div:nth-of-type(1) > button:hover{
+    opacity: .8;
+    transition: .2s ease
+    ;
 }
 
 .ctasection > div:nth-of-type(1) > button > img{
@@ -105,8 +117,9 @@
     height: 52px;
 }
 
-.ctasection > div:nth-of-type(2) > section > div > div > a > img{
-    filter: invert(1);
+.ctasection > div:nth-of-type(2) > section > div > div > a:hover > img{
+    transform: scale(1.3);
+    transition: .2s ease;
 }
 
 .ctasection > div:nth-of-type(2) > section > div > div > div{
@@ -122,7 +135,8 @@
     font-size: 28px;
     font-weight: 600;
     line-height: 32px;
-    letter-spacing: -2%;
+    letter-spacing: -1px;
+    max-width: 90%;
 }
 
 .ctasection > div:nth-of-type(2) > section > div > div > div > p{
@@ -136,8 +150,6 @@
 
 
 
-
-
 @media only screen and (max-width: 768px) {
     .ctasection > div:nth-of-type(2) > section{
         height: 468px;
@@ -146,9 +158,11 @@
 
 
 
+@media only screen and (max-width: 575px) {
+    .ctasection > div:nth-of-type(1){
+        margin: 0 auto 32px auto;
+    }
 
-
-@media only screen and (max-width: 475px) {
     .ctasection > div:nth-of-type(2){
         grid-template-columns: 1fr;
         gap: 24px;
@@ -156,5 +170,33 @@
 
     .ctasection > div:nth-of-type(2) > section{
         height: 335px;
+    }
+
+    .ctasection > div:nth-of-type(1) > div > p{
+        font-size: 14px;
+    }
+
+    .ctasection > div:nth-of-type(1) > div > h2{
+        font-size: 36px;
+        line-height: 40px;
+        max-width: 90%;
+    }
+
+    .ctasection > div:nth-of-type(1) > p{
+        font-size: 17px;
+    }
+
+    .ctasection > div:nth-of-type(1) > button{
+        font-size: 17px;
+    }
+
+    .ctasection > div:nth-of-type(2) > section > div > div > div > h3{
+        font-size: 22px;
+        line-height: 24px;
+    }
+
+    .ctasection > div:nth-of-type(2) > section > div > div > div > p{
+        font-size: 17px;
+        line-height: 24px;
     }
 }

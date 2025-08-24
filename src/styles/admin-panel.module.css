@@ -17,6 +17,22 @@
     font-weight: 500;
 }
 
+.adminpanel > div:nth-of-type(1) > button{
+    padding: 12px 15px;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: .5px;
+    background-color: var(--groenGrijs);
+    color: #ffff;
+    border: none;
+    border-radius: 5px;
+}
+
+.adminpanel > div:nth-of-type(1) > button:hover{
+    opacity: .8;
+    transition: .2s ease;
+}
+
 .adminpanel > div:nth-of-type(2){
     max-width: 864px;
     margin: 0 auto 50px auto;
@@ -76,6 +92,7 @@
     font-size: 15px;
     font-weight: 450;
     line-height: 16px;
+    color: var(--groenGrijs);
 }
 
 .adminpanel > div:nth-of-type(2) > section:nth-of-type(2){
@@ -88,26 +105,23 @@
     font-size: 30px;
     font-weight: 600;
     line-height: 48px;
-    letter-spacing: -3%;
+    color: var(--headerZwart);
 }
 
 .adminpanel > div:nth-of-type(2) > section:nth-of-type(3) > input{
     font-size: 19px;
     font-weight: 450;
     line-height: 24px;
-    letter-spacing: 2%;
 }
 
 .adminpanel > div:nth-of-type(2) > section:nth-of-type(4) > input{
     font-size: 19px;
     font-weight: 450;
     line-height: 24px;
-    letter-spacing: 2%;
     background: none;
     border: none;
-    color: red;
+    color: var(--oranjeRood);
 }
-
 
 
 

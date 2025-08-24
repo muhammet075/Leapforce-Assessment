@@ -87,6 +87,11 @@ export default function Adminpanel() {
   async function saveData() {
     const data = { label, title, optionalBody, optionalButton, cards };
 
+    if (label === '' || title === '') {
+        alert("Title or label is a requierd field");
+        return; // stop de functie als een van de velden leeg is
+    }
+
     try {
       //Vaste document ID "mainCTA" om tte overschrijven
       await setDoc(doc(db, "ctaData", "mainCTA"), data);
@@ -110,6 +115,10 @@ export default function Adminpanel() {
     alert("To display text in a lighter font, place the desired text between <span> and </span>. For example: <span>welcome</span>.")
   }
 
+    function labelButtonInfo(){
+    alert("This will be the first word/label of the header section.")
+  }
+
   return (
     <div className={styles.adminpanel}>
       <div>
@@ -120,12 +129,13 @@ export default function Adminpanel() {
       <div>
         <section>
           <label>Label</label>
-          <input value={label} onChange={e => setLabel(e.target.value)} maxlength="20"/>
+          <input id="labelinput" value={label} onChange={e => setLabel(e.target.value)} maxlength="20"/>
+          <button onClick={labelButtonInfo} title="Information about this block">?</button>
         </section>
 
         <section>
           <label>Title</label>
-          <input value={title} onChange={e => setTitle(e.target.value)} />
+          <input id="titleinput" value={title} onChange={e => setTitle(e.target.value)} />
           <button onClick={titleButtonInfo} title="Information about this block">?</button>
         </section>
 
