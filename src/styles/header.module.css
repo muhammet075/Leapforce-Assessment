@@ -43,12 +43,30 @@
     height: auto;
 }
 
+.header > div > a:last-child:hover{
+    opacity: .6;
+    transition: .2s ease;
+}
+
+@media only screen and (max-width: 1400px) {
+    .header > div > a:last-child{
+        font-size: 0px;
+        top: 0;
+        bottom: 0;
+        right: 8px;
+    }
+
+    .header > div > a:last-child img{
+        width: 18px;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .header > div > a h1{
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 
     .header > div > a h2{
-        font-size: 1.1em;
+        font-size: 1em;
     }
 }
