@@ -4,28 +4,33 @@
 
 .ctasection > div:nth-of-type(1){
     max-width: 864px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 80px auto;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
-
 .ctasection > div:nth-of-type(1) > p:nth-of-type(1){
     font-size: 15px;
     font-weight: 450;
     line-height: 16px;
-    letter-spacing: 2%;
+    color: var(--groenGrijs);
 }
 
 .ctasection > div:nth-of-type(1) > h2{
-    max-width: 642px;
+    max-width: 500px;
     margin: 0 auto;
     font-size: 40px;
     font-weight: 600;
+    letter-spacing: -1px;
     line-height: 48px;
-    letter-spacing: -3%;
+    color: var(--headerZwart);
+}
+
+.ctasection > div:nth-of-type(1) > h2 > span{
+    font-family: "GTAlpina Light";
+    font-weight: 300;
 }
 
 .ctasection > div:nth-of-type(1) > p:nth-of-type(2){
@@ -36,15 +41,21 @@
 }
 
 .ctasection > div:nth-of-type(1) > button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
     background: none;
     border: none;
     font-size: 19px;
     font-weight: 450;
     line-height: 24px;
-    letter-spacing: 2%;
-    color: red;
+    color: var(--oranjeRood);
 }
 
+.ctasection > div:nth-of-type(1) > button > img{
+    margin: 10px;
+}
 
 
 .ctasection > div:nth-of-type(2){
@@ -118,7 +129,7 @@
     color: #FAFAFA;
     opacity: 50%;
     font-size: 19px;
-    font-weight: normal;
+    font-weight: 500;
     line-height: 24px;
     letter-spacing: 0%;
 }

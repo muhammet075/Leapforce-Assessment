@@ -15,16 +15,20 @@
 }
 
 .header > div > a h1{
+    font-family: "Montserrat";
     font-size: 2.2em;
     font-weight: 500;
 }
 
 .header > div > a h2{
+    font-family: "Montserrat";
     font-size: 1.4em;
     font-weight: 400;
 }
 
 .header > div > a:last-child{
+    font-weight: 400;
+    font-family: "Montserrat";
     position: absolute;
     bottom: 8px;
     right: 0;

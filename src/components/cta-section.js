@@ -5,6 +5,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../components/firebase";
 import styles from "@/styles/cta-section.module.css";
 import arrowRight from "@/assets/icons/arrow-right.svg";
+import oranjeRoodArrowRight from "@/assets/icons/arrow-right-oranjerood.svg";
 
 export default function CtaSection() {
   const [ctaData, setCtaData] = useState(null); // enkel 1 document
@@ -36,9 +37,9 @@ export default function CtaSection() {
     <div className={styles.ctasection}>
       <div>
         <p>{ctaData.label}</p>
-        <h2>{ctaData.title}</h2>
+        <h2 dangerouslySetInnerHTML={{ __html: ctaData.title }} />
         {ctaData.optionalBody && <p>{ctaData.optionalBody}</p>}
-        {ctaData.optionalButton && <button>{ctaData.optionalButton}</button>}
+        {ctaData.optionalButton && <button>{ctaData.optionalButton}<Image src={oranjeRoodArrowRight} alt="Arrow right icon"/></button>}
       </div>
 
 
