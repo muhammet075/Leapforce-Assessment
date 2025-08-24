@@ -207,3 +207,65 @@
 .adminpanel > div:nth-of-type(3) > section > div > div:nth-of-type(3) > input{
     padding: 5px;
 }
+
+@media only screen and (max-width: 1000px) {
+    .adminpanel > div:nth-of-type(2) > section:nth-of-type(2){
+        width: 90%;
+    }
+
+    .adminpanel > div:nth-of-type(2) > section:nth-of-type(2) > input{
+        font-size: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    .adminpanel > div:nth-of-type(3) > section{
+        height: 350px;
+    }
+
+    .adminpanel > div:nth-of-type(3) > section > div{
+        padding: 0 0 15px 0;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .adminpanel > div:nth-of-type(3) > section > div > div{
+        width: 90%;
+        margin: 0;
+    }
+
+    .adminpanel > div:nth-of-type(3) > section > div > div:nth-of-type(1) > input{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .adminpanel{
+        margin: -48px 0 0 -15px;
+        padding: 15px;
+        width: 100vw;
+    }
+
+    .adminpanel > div:nth-of-type(1){
+        margin: 15px 0 50px 0;
+        padding: 0 0 25px 0;
+    }
+
+    .adminpanel > div:nth-of-type(2) > section,
+    .adminpanel > div:nth-of-type(2) > section:nth-of-type(2){
+        width: 80%;
+    }
+
+    .adminpanel > div:nth-of-type(2) > section > button{
+        right: -35px;
+    }
+}
+
+
+@media only screen and (max-width: 575px) {
+   .adminpanel > div:nth-of-type(3){
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
