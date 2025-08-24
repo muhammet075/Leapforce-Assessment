@@ -1,6 +1,39 @@
 @import url('https://fonts.googleapis.com/css?family=Fredoka:100,200,300,400,500,600,700,800,900,1000&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900,1000&display=swap');
 
+
+@font-face {
+  font-family: "TT Commons Pro";
+  src: url("/fonts/TT Commons Pro DemiBold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Commons Pro";
+  src: url("/fonts/TT Commons Pro Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Commons Pro";
+  src: url("/fonts/TT Commons Pro Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Commons Pro";
+  src: url("/fonts/TT Commons Pro Light.otf") format("opentype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -15,7 +48,11 @@ body {
 }
 
 h1, h2, h3, h4{
-  font-family: "Montserrat";
+  font-family: "TT Commons Pro";
+}
+
+p{
+  font-family: "TT Commons Pro";
 }
 
 main{
@@ -27,8 +64,10 @@ main{
 a {
   color: #000;
   text-decoration: none;
+  font-family: "TT Commons Pro";
 }
 
 button{
   cursor: pointer;
+  font-family: "TT Commons Pro";
 }
