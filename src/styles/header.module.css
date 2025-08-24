@@ -15,12 +15,16 @@
 }
 
 .header > div > a h1{
+    width: fit-content;
+    margin: 0 auto;
     font-family: "Montserrat";
     font-size: 2.2em;
     font-weight: 500;
 }
 
 .header > div > a h2{
+    width: fit-content;
+    margin: 0 auto;
     font-family: "Montserrat";
     font-size: 1.4em;
     font-weight: 400;
