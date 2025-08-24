@@ -99,20 +99,22 @@ export default function Adminpanel() {
         setSuccess(false);
       }, 10000);
 
-      alert("Data opgeslagen in Firebase DB");
+      alert("Data saved in Firebase DB");
 
     } catch (error) {
       console.error(error);
     };
   };
 
-
+  function titleButtonInfo(){
+    alert("To display text in a lighter font, place the desired text between <span> and </span>. For example: <span>welcome</span>.")
+  }
 
   return (
     <div className={styles.adminpanel}>
       <div>
         <h2>Admin Panel</h2>
-        <button onClick={saveData}>Opslaan</button>
+        <button onClick={saveData}>Save changes</button>
       </div>
 
       <div>
@@ -124,6 +126,7 @@ export default function Adminpanel() {
         <section>
           <label>Title</label>
           <input value={title} onChange={e => setTitle(e.target.value)} />
+          <button onClick={titleButtonInfo} title="Information about this block">?</button>
         </section>
 
         <section>
@@ -137,7 +140,7 @@ export default function Adminpanel() {
         </section>
 
         <section>
-          <label>Aantal Cards</label>
+          <label>Total Cards</label>
           <select value={amountCards} onChange={e => setAmountCards(parseInt(e.target.value))}>
             {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
               <option key={num} value={num}>{num}</option>
@@ -172,7 +175,7 @@ export default function Adminpanel() {
         </div>
 
       {success && (
-        <div id="succesmessage"><p>Aanpassingen met succes opgeslagen!</p></div>
+        <div id="succesmessage"><p>Changes saved successfully!</p></div>
       )}
 
 

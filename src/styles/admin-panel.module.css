@@ -52,6 +52,26 @@
     text-align: center;
 }
 
+.adminpanel > div:nth-of-type(2) > section > button{
+    position: absolute;
+    right: -40px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 100px;
+    background-color: var(--groenGrijs);
+    color: #ffff;
+    font-weight: 500;
+}
+
+.adminpanel > div:nth-of-type(2) > section > button:hover{
+    opacity: .8;
+    transition: .2s ease;
+}
+
 .adminpanel > div:nth-of-type(2) > section:nth-of-type(1) > input{
     font-size: 15px;
     font-weight: 450;

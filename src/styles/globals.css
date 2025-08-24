@@ -42,16 +42,11 @@
   font-display: swap;
 }
 
-
-
-
 :root {
   --groenGrijs: #39494D;
   --headerZwart: #212121;
   --oranjeRood: #BF564D;
 }
-
-
 
 * {
   padding: 0;
